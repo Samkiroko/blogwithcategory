@@ -1,14 +1,17 @@
 <div class="container">
   <div class="row">
-    <% @blogs.each do |blog|%>
-      <div class="col-md-4">
+  <div class = 'col-md-10'>
+  <% @blogs.each do |blog|%>
+      <div class="col-md-3">
         <div class="card mt-3">
           <div class="card-body">
             <h3> <%= link_to blog.title, blog_path(blog.id) %> </h3>
-            <%= link_to 'view', blog_path(blog.id), class: 'btn btn-green'  %>
+            <%= link_to 'view', blog_path(blog.id), class: 'btn btn-primary' %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+  </div>
+    

@@ -5,10 +5,11 @@
         <div class="card mt-3">
           <div class="card-body">
             <h3> <%= link_to blog.title, blog_path(blog.id) %> </h3>
-            <%= link_to 'view', blog_path(blog.id), class: 'btn btn-green'  %>
+            <%= link_to 'view', blog_path(blog.id), class: 'btn btn-primary' %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+

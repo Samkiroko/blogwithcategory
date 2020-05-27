@@ -1,0 +1,9 @@
+
+
+
+<h1>Category: <%= @blog.category.category%></h1>
+<h3><%= @blog.title%></h3>
+<P> <%= @blog.content%></p>
+<%= link_to 'Edit', edit_blog_path(@blog.id) %>
+<%= link_to "Delete", blog_path(@blog.id), method: :delete, :confirm => "Are you sure?"%>
+<%= link_to 'Back', blogs_path %>

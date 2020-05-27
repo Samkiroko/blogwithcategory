@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+.btn {
+  color: aqua;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: "Poiret One", cursive;
+  font-size: 2em;
+}
+
+.btn-green {
+  @include button-bg(#2ecc71);
+}

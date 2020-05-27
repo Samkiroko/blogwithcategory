@@ -1,6 +1,14 @@
 class BlogsController < ApplicationController
   def index
-   @blogs =Blog.all
+    @categories = Category.all
+
+
+    cate = param[:cate]
+
+    if !cate.nil?
+      @blogs = Blog.where(:category_id => cate)
+    end
+    @blogs = Blog.all
   end
 
   def show

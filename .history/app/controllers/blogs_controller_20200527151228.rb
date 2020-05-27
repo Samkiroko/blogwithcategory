@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   def index
-   @blogs =Blog.all
+    @blogs = Blog.all
   end
 
   def show
@@ -39,18 +39,13 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blog_path, notice: 'Category was successfully destroyed.' }
+      format.html { redirect_to :index, notice: 'Category was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
 
   private
-
-  def set_blog
-      @blog = Blog.find(params[:id])
-  end
-
   def blog_params
     params.require(:blog).permit(:title, :content,:category_id)
   end

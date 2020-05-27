@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   def index
-   @blogs =Blog.all
+    @blogs = Blog.all
   end
 
   def show
@@ -39,7 +39,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blog_path, notice: 'Category was successfully destroyed.' }
+      format.html { redirect_to blogs_url, notice: 'Category was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
