@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="row">
+    <% @blogs.each do |blog|%>
+    <div class="col-md-4">
+    <div class="card mt-3">
+    <h3> <%= link_to blog.title, blog_path(blog.id) %> </h3>
+    </div>
+    <div class="card-body">
+    <%= link_to 'view', blog_path(blog.id), class: 'btn btn-primary' %>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+<% end %>
+<%= link_to 'create Blog', new_blog_path %>
